@@ -1,0 +1,81 @@
+/* 기본 레이아웃 및 좌측 패널 복구 */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body, html { width: 100%; height: 100%; background-color: #4d4d4d; overflow: hidden; font-family: 'Pretendard', sans-serif; }
+.container { display: flex; width: 100vw; height: 100vh; }
+
+.sidebar { width: 80px; background-color: #5a5a5a; display: flex; flex-direction: column; justify-content: space-between; align-items: center; padding: 30px 0; border-right: 1px solid rgba(255,255,255,0.05); }
+.circle-btn { width: 40px; height: 40px; border-radius: 50%; border: 2px solid #777; display: flex; align-items: center; justify-content: center; color: #777; font-weight: bold; }
+.circle-filled { width: 40px; height: 40px; background-color: #b3b3b3; border-radius: 50%; }
+
+.main-content { flex: 1; display: flex; padding: 50px; gap: 50px; }
+.left-panel { flex: 0 0 450px; display: flex; flex-direction: column; gap: 40px; }
+.profile-card { background-color: #666; border-radius: 30px; padding: 30px; display: flex; gap: 25px; }
+.profile-img { width: 110px; height: 130px; background-color: #b3b3b3; border-radius: 20px; }
+.profile-lines { display: flex; flex-direction: column; gap: 15px; justify-content: center; }
+.line { background-color: #b3b3b3; border-radius: 10px; height: 16px; }
+.line.lg { width: 180px; } .line.sm { width: 120px; }
+.pill { width: 90px; height: 35px; background-color: #b3b3b3; border-radius: 20px; margin-top: 5px; }
+
+.timeline { display: flex; flex-direction: column; gap: 35px; padding-left: 10px; }
+.timeline-item { display: flex; gap: 25px; position: relative; }
+.timeline-item::before { content: ''; position: absolute; left: 7px; top: 20px; width: 2px; height: 50px; background-color: #b3b3b3; }
+.dot { width: 16px; height: 16px; background-color: #b3b3b3; border-radius: 50%; margin-top: 5px; z-index: 2; }
+
+.tag-group { display: flex; flex-direction: column; gap: 15px; }
+.tag-row { display: flex; gap: 15px; }
+.tag { height: 35px; border: 2px solid #b3b3b3; border-radius: 20px; }
+.tag.w1 { width: 80px; } .tag.w2 { width: 160px; } .tag.w3 { width: 120px; }
+
+.bottom-bars { margin-top: auto; display: flex; flex-direction: column; gap: 15px; }
+.progress-line { width: 250px; height: 10px; background-color: #7a7a7a; border-radius: 5px; }
+.progress-box { width: 100%; height: 55px; background-color: #b3b3b3; border-radius: 12px; }
+
+/* 우측 패널 및 책장 설정 */
+.right-panel { flex: 1; position: relative; }
+.card-body { position: absolute; top: 0; right: 0; width: 100%; height: 100%; background-color: #b3b3b3; border-radius: 60px; padding: 40px; overflow: hidden; }
+
+/* 노치 곡선 */
+.right-panel::after { content: ""; position: absolute; left: 0; bottom: 0; width: 30%; height: 35%; background-color: #4d4d4d; border-top-right-radius: 80px; }
+.curve-top { position: absolute; left: 0; bottom: 35%; width: 40px; height: 40px; box-shadow: -10px 10px 0 0 #4d4d4d; border-bottom-left-radius: 25px; }
+.curve-right { position: absolute; left: 30%; bottom: 0; width: 40px; height: 40px; box-shadow: -10px 10px 0 0 #4d4d4d; border-bottom-left-radius: 25px; }
+.star-icon { position: absolute; left: 50px; bottom: 10%; font-size: 100px; color: white; z-index: 5; }
+.top-dot { position: absolute; top: 40px; right: 40px; width: 50px; height: 50px; background-color: #8c8c8c; border-radius: 50%; }
+
+/* 책장 배치 최적화 */
+.bookshelf { display: flex; flex-direction: column; height: 100%; gap: 15px; }
+.shelf { border-bottom: 7px solid #8d7766; display: flex; align-items: flex-end; height: 140px; margin-bottom: 20px; padding: 0 10px; justify-content: space-around; }
+.shelf-bottom { justify-content: flex-end; padding-right: 30px; } /* 하단 노치를 피해 오른쪽으로 정렬 */
+
+.book { width: 50px; border-radius: 4px 4px 1px 1px; cursor: pointer; transition: transform 0.2s; display: flex; align-items: center; justify-content: center; writing-mode: vertical-rl; color: white; font-size: 11px; font-weight: bold; box-shadow: inset 3px 0 5px rgba(0,0,0,0.2); }
+.book:hover { transform: translateY(-10px); filter: brightness(1.1); }
+.b-red { background: #e58a7d; height: 115px; } .b-blue { background: #74a4bc; height: 125px; }
+.b-green { background: #a8c69f; height: 105px; } .b-yellow { background: #f2cc8f; height: 118px; color: #555; }
+.b-purple { background: #b8a2c7; height: 130px; }
+.leaning-r { transform: rotate(10deg); margin-left: 5px; }
+.leaning-l { transform: rotate(-10deg); margin-right: 5px; }
+
+/* --- 3D 중앙 펼침 모달 --- */
+.modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); display: none; justify-content: center; align-items: center; z-index: 1000; perspective: 2500px; }
+
+/* 중앙 정렬을 위한 래퍼 */
+.modal-center-container { width: 420px; height: 580px; position: relative; transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1); }
+.modal.open .modal-center-container { transform: translateX(210px); } /* 책 너비의 절반만큼 오른쪽으로 밀어서 Spine을 중앙에 고정 */
+
+.book-3d { width: 100%; height: 100%; transform-style: preserve-3d; }
+.page { position: absolute; width: 100%; height: 100%; top: 0; left: 0; background: #fff; transform-origin: left; backface-visibility: hidden; transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1); box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
+
+.page-right { z-index: 1; border-radius: 0 10px 10px 0; }
+.page-cover { z-index: 2; transform-style: preserve-3d; }
+.modal.open .page-cover { transform: rotateY(-180deg); }
+
+.side { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; }
+.front { background: #74a4bc; border-radius: 0 10px 10px 0; display: flex; justify-content: center; align-items: center; color: white; text-align: center; }
+.back { transform: rotateY(180deg); background: #fdfdfd; border-radius: 10px 0 0 10px; background: linear-gradient(to left, #e0e0e0 0%, #fdfdfd 10%); }
+
+.page-content { padding: 50px; height: 100%; display: flex; flex-direction: column; }
+.page-content h2 { color: #333; margin-bottom: 25px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+.page-content p { color: #666; line-height: 1.8; }
+.page-content ul { margin-top: 20px; list-style: none; color: #888; }
+.page-num { margin-top: auto; text-align: center; color: #ccc; }
+
+.close-btn { position: absolute; top: 30px; right: 40px; color: white; font-size: 50px; cursor: pointer; }

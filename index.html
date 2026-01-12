@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Interactive Bookshelf</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-top"><div class="circle-btn">✕</div></div>
+            <div class="sidebar-bottom"><div class="circle-filled"></div></div>
+        </aside>
+
+        <main class="main-content">
+            <section class="left-panel">
+                <div class="profile-card">
+                    <div class="profile-img"></div>
+                    <div class="profile-lines">
+                        <div class="line lg"></div>
+                        <div class="line sm"></div>
+                        <div class="pill"></div>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="dot"></div>
+                        <div class="profile-lines"><div class="line sm"></div><div class="line lg"></div></div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="dot"></div>
+                        <div class="profile-lines"><div class="line lg"></div><div class="line sm"></div></div>
+                    </div>
+                </div>
+
+                <div class="tag-group">
+                    <div class="tag-row"><div class="tag w1"></div><div class="tag w2"></div></div>
+                    <div class="tag-row"><div class="tag w3"></div><div class="tag w1"></div><div class="tag w1"></div></div>
+                </div>
+
+                <div class="bottom-bars">
+                    <div class="progress-line"></div>
+                    <div class="progress-box"></div>
+                    <div class="progress-box"></div>
+                </div>
+            </section>
+
+            <section class="right-panel">
+                <div class="card-body">
+                    <div class="bookshelf">
+                        <div class="shelf">
+                            <div class="book b-red" onclick="openBook('HTML5 가이드', '#e58a7d')"><span>HTML5</span></div>
+                            <div class="book b-blue" onclick="openBook('CSS3 마스터', '#74a4bc')"><span>CSS3</span></div>
+                            <div class="book b-green leaning-r" onclick="openBook('JS 완벽 가이드', '#a8c69f')"><span>JS GUIDE</span></div>
+                            <div class="book b-purple" onclick="openBook('React 입문', '#b8a2c7')"><span>REACT</span></div>
+                            <div class="book b-yellow leaning-l" onclick="openBook('TypeScript', '#f2cc8f')"><span>TS</span></div>
+                            <div class="book b-red" onclick="openBook('Node.js 실무', '#e58a7d')"><span>NODE.JS</span></div>
+                        </div>
+                        <div class="shelf">
+                            <div class="book b-blue leaning-r" onclick="openBook('UI 디자인', '#74a4bc')"><span>UI/UX</span></div>
+                            <div class="book b-yellow" onclick="openBook('Clean Code', '#f2cc8f')"><span>CLEAN</span></div>
+                            <div class="book b-purple" onclick="openBook('알고리즘', '#b8a2c7')"><span>ALGO</span></div>
+                            <div class="book b-red leaning-l" onclick="openBook('Git 버전관리', '#e58a7d')"><span>GIT</span></div>
+                            <div class="book b-green" onclick="openBook('Python 기초', '#a8c69f')"><span>PYTHON</span></div>
+                            <div class="book b-blue" onclick="openBook('SQL 마스터', '#74a4bc')"><span>SQL</span></div>
+                        </div>
+                        <div class="shelf shelf-bottom">
+                            <div class="book b-purple leaning-r" onclick="openBook('Docker', '#b8a2c7')"><span>DOCKER</span></div>
+                            <div class="book b-yellow" onclick="openBook('Portfolio', '#f2cc8f')"><span>PORTFOLIO</span></div>
+                            <div class="book b-green" onclick="openBook('AI 기초', '#a8c69f')"><span>AI</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="curve-top"></div>
+                <div class="curve-right"></div>
+                <div class="top-dot"></div>
+                <div class="star-icon">✱</div>
+            </section>
+        </main>
+    </div>
+
+    <div id="bookModal" class="modal">
+        <span class="close-btn" onclick="closeBook()">&times;</span>
+        <div class="modal-center-container">
+            <div class="book-3d">
+                <div class="page page-right">
+                    <div class="page-content">
+                        <h2 id="modalTitleInside">Title</h2>
+                        <p>이 책은 친구님의 꿈을 응원하기 위해 준비되었습니다. <br><br>중앙을 기준으로 자연스럽게 펼쳐지는 3D 레이아웃입니다. 이제 양쪽 페이지가 모두 잘 보이시죠?</p>
+                        <div class="page-num">- 2 -</div>
+                    </div>
+                </div>
+                <div class="page page-cover">
+                    <div class="side front" id="modalCover">
+                        <div class="cover-design">
+                            <h1>STUDY</h1>
+                            <p id="modalTitleCover">TITLE</p>
+                        </div>
+                    </div>
+                    <div class="side back">
+                        <div class="page-content">
+                            <h2>INDEX</h2>
+                            <ul>
+                                <li>01. 기초 이론</li>
+                                <li>02. 실습 예제</li>
+                                <li>03. 응용 프로젝트</li>
+                            </ul>
+                            <div class="page-num">- 1 -</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
