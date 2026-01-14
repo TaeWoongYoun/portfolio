@@ -6,832 +6,614 @@ const bookData = {
     // ============================================
     // 1층: 개인 프로젝트 (Individual Projects)
     // ============================================
-    'WLMS': {
-        summary: `
-            <h3>📌 프로젝트 소개</h3>
-            <p>인평자동차고등학교 기능반 후배들을 위한 종합 학습 플랫폼입니다. Netflix 스타일의 카드 그리드 디자인을 적용했습니다.</p>
+    'LMS': {
+        left: `
+            <h3>LMS 프로젝트 소개</h3>
+            <p>기능반 후배들에게 학습했던 모든 것을 체계적으로 전수하기 위해 개발된 W-LMS는 종합적인 학습 관리 플랫폼입니다. 과제 제출, GitHub 연동, 게시판 기능 등 동아리 활동에 최적화된 기능들을 제공합니다.</p>
             
-            <h3>🛠️ 기술 스택</h3>
+            <h3>기술 스택</h3>
             <ul>
-                <li><strong>Frontend:</strong> React 18, Router, Axios</li>
-                <li><strong>Backend:</strong> Node.js, Express, JWT</li>
-                <li><strong>Database:</strong> MySQL 8.0, Sequelize</li>
-                <li><strong>Deploy:</strong> Railway, GitHub Actions</li>
+                <li><strong>Frontend: React</strong> </li>
+                <li><strong>Backend: Node.js</strong> </li>
+                <li><strong>Database: MySQL</strong> </li>
+                <li><strong>Deploy: Railway</strong> </li>
             </ul>
             
-            <h3>🔗 링크</h3>
+            <h3>링크</h3>
             <p>
-                <a href="https://github.com/TaeWoongYoun/LMS" target="_blank">📂 GitHub</a><br>
-                <a href="https://inpyung-learn.com" target="_blank">🌐 Live Demo</a>
+                <a href="https://github.com/TaeWoongYoun/LMS">GitHub Repository</a><br>
+                <a href="https://lms-production-479d.up.railway.app/" target="_blank">Live Demo</a>
             </p>
         `,
-        body: `
-            <h3>⭐ 주요 기능</h3>
-            <ul>
-                <li>GitHub API - 잔디 실시간 시각화</li>
-                <li>과제 제출 및 멘토 피드백</li>
-                <li>자동 채점 시스템</li>
-                <li>커스텀 도메인 (inpyung-learn.com)</li>
-                <li>반응형 디자인</li>
-            </ul>
+        right: `
+            <div class="project-image-frame">
+                <img src="image/WLMS.png" alt="WLMS">
+            </div>
             
-            <h3>🏆 성과</h3>
-            <p>2025 한양대 SW/ICT/AI 종합학술대회<br>404 Not Found 세션 발표</p>
+            <h3>개발 기간</h3>
+            <p>2024.12 ~ 2025.11</p>
+
             
-            <h3>📅 개발 기간</h3>
-            <p>2024.09 ~ 2025.01 (5개월)</p>
-            
-            <h3>👤 참여 인원</h3>
-            <p>개인 프로젝트 (1인 개발)</p>
+            <h3>외부 활동</h3>
+            <p>2025년 한양대학교 SW/ICT/AI 종합학술대회 참가: 404 Not Found Session</p>
         `,
         color: '#e58a7d', tag: 'INDIVIDUAL'
     },
     
     'KPI': {
-        summary: `
-            <h3>📌 프로젝트 소개</h3>
-            <p>기업의 부서별 핵심성과지표를 체계적으로 관리하고 분석하는 웹 애플리케이션입니다.</p>
+        left: `
+            <h3>KPI 프로젝트 소개</h3>
+            <p>가상의 스마트제조 기업 A사의 생산 KPI 연계 프로젝트 : <br>스마트팩토리 솔루션 공급사의 프로그래머로 스마트팩토리 솔루션 도입기업의 생산 KPI 데이터를 "스마트제조 KPI 연계 시스템"에 전송하는 스케쥴러 프로그램을 개발한다.</p>
             
-            <h3>🛠️ 기술 스택</h3>
+            <h3>기술 스택</h3>
             <ul>
-                <li><strong>Backend:</strong> Spring Boot 3.x</li>
-                <li><strong>ORM:</strong> Spring Data JPA</li>
-                <li><strong>Security:</strong> Spring Security</li>
-                <li><strong>Database:</strong> MySQL, HikariCP</li>
+                <li><strong>Frontend:HTML&CSS&JS</strong> </li>
+                <li><strong>Backend:Spring</strong> </li>
+                <li><strong>Database:MySQL</strong> </li>
             </ul>
             
-            <h3>🔗 링크</h3>
-            <p><a href="https://github.com/TaeWoongYoun/KPI" target="_blank">📂 GitHub Repository</a></p>
+            <h3>링크</h3>
+            <p>
+                <a href="https://github.com/TaeWoongYoun/KPI" target="_blank">GitHub Repository</a><br>
+            </p>
         `,
-        body: `
-            <h3>⭐ 주요 기능</h3>
-            <ul>
-                <li>부서별 KPI 목표 설정</li>
-                <li>실적 입력 및 달성률 자동 계산</li>
-                <li>가중치 적용 종합 성과 산출</li>
-                <li>정부 서버 다건 데이터 전송</li>
-                <li>RESTful API 설계</li>
-            </ul>
+        right: `
+            <div class="project-image-frame">
+                <img src="image/KPI.png" alt="KPI">
+            </div>
             
-            <h3>🔧 API 테스트</h3>
-            <p>Postman, Swagger UI</p>
+            <h3>개발 기간</h3>
+            <p>2025.12.31 ~ 2026.01.13</p>
             
-            <h3>📝 비고</h3>
-            <p>한양대학교 프로젝트, 정부 기관 데이터 전송 요구사항 반영</p>
-            
-            <h3>👤 참여 인원</h3>
-            <p>개인 프로젝트 (1인 개발)</p>
+            <h3>상세 내용</h3>
+            <p>1학년 겨울계절학기 자바프로그래밍기초 실습 자료.</p>
         `,
         color: '#74a4bc', tag: 'INDIVIDUAL'
     },
     
     'Algorithm': {
-        summary: `
-            <h3>📌 프로젝트 소개</h3>
-            <p>프로그래머스 및 백준 알고리즘 문제 풀이를 체계적으로 정리한 학습 아카이브입니다.</p>
+        left: `
+            <h3>programmers-algorithm 프로젝트 소개</h3>
+            <p>프로그래머스 알고리즘을 풀며 기록한 Repo입니다. Python을 위주로 학습하였으며 Java와 C언어를 함께 학습했습니다.</p>
             
-            <h3>🛠️ 사용 언어</h3>
+            <h3>기술 스택</h3>
             <ul>
-                <li><strong>Python</strong> - 메인 언어</li>
-                <li><strong>Java 11</strong> - 서브 언어</li>
-                <li><strong>C</strong> - 기초 알고리즘</li>
+                <li><strong>Language: Python, Java, C</strong> </li>
+                <li><strong>Platform: 프로그래머스</strong> </li>
             </ul>
             
-            <h3>🔗 링크</h3>
-            <p><a href="https://github.com/TaeWoongYoun/programmers-algorithm" target="_blank">📂 GitHub ⭐1</a></p>
+            <h3>링크</h3>
+            <p>
+                <a href="https://github.com/TaeWoongYoun/programmers-algorithm" target="_blank">GitHub Repository</a>
+            </p>
         `,
-        body: `
-            <h3>📚 학습 범위</h3>
-            <ul>
-                <li><strong>자료구조:</strong> 스택, 큐, 해시, 힙, 트리</li>
-                <li><strong>알고리즘:</strong> DFS/BFS, DP, 그리디</li>
-            </ul>
+        right: `
+            <div class="project-image-frame">
+                <img src="image/Algorithm.png" alt="Algorithm">
+            </div>
             
-            <h3>📊 난이도</h3>
-            <p>프로그래머스 Lv1~5<br>백준 Bronze~Platinum</p>
+            <h3>학습 기간</h3>
+            <p>2024.01 ~ </p>
             
-            <h3>📖 학습 활동</h3>
-            <ul>
-                <li>HYAI 알고리즘 스터디 (2025.04~06)</li>
-                <li>주 3회 코딩테스트</li>
-                <li>시간/공간 복잡도 분석</li>
-            </ul>
-            
-            <h3>🎯 학습 방법</h3>
-            <p>매일 최소 1문제, 다양한 접근법 시도</p>
+            <h3>상세 내용</h3>
+            <p>일부 Python 코드는 (주)두나정보기술에서 코드리뷰를 하며 학습했습니다.</p>
         `,
         color: '#a8c69f', tag: 'INDIVIDUAL'
     },
     
     'AIX': {
-        summary: `
-            <h3>📌 프로젝트 소개</h3>
-            <p>한양대 AIX 융합 교과목 데이터 분석 및 통계 분석 프로젝트 모음입니다.</p>
+        left: `
+            <h3>AIX-R-Py 프로젝트 소개</h3>
+            <p>AI+X:R-Py 컴퓨팅 수업에서 R과 Python을 활용한 프로젝트입니다. 본 연구는 2022년 11월 ChatGPT 출시 이후 소프트웨어 개발 생태계의 변화를 실제 데이터를 통해 정량적으로 분석합니다. GitHub AI 레포지토리 185만 개와 Stack Overflow 질문 데이터를 기반으로, ChatGPT 출시 전후의 개발자 행동 패턴 변화를 통계적으로 검증합니다.</p>
             
-            <h3>🛠️ 기술 스택</h3>
+            <h3>기술 스택</h3>
             <ul>
-                <li><strong>R:</strong> ggplot2, dplyr, tidyr</li>
-                <li><strong>Python:</strong> Pandas, Scikit-learn</li>
-                <li><strong>시각화:</strong> Matplotlib, Seaborn</li>
+                <li><strong>Language:</strong> R, Python</li>
+                <li><strong>Library:</strong> Pandas, Matplotlib, Numpy</li>
+                <li><strong>Tool:</strong> Google Colab</li>
             </ul>
             
-            <h3>🔗 링크</h3>
-            <p><a href="https://github.com/TaeWoongYoun/AIX-R-Py-Repo" target="_blank">📂 GitHub Repository</a></p>
+            <h3>링크</h3>
+            <p>
+                <a href="https://github.com/TaeWoongYoun/AIX-R-Py-Repo" target="_blank">GitHub Repository</a> <br>
+                <a href="https://taewoongyoun.github.io/AIX-R-Py-Repo/" target="_blank">Live Demo</a>
+            </p>
         `,
-        body: `
-            <h3>📊 R 언어 분석</h3>
-            <ul>
-                <li>데이터 시각화 (히스토그램, 산점도)</li>
-                <li>회귀분석, ANOVA, t-검정</li>
-            </ul>
+        right: `
+            <div class="project-image-frame">
+                <img src="image/AIX.png" alt="AIX">
+            </div>
             
-            <h3>🐍 Python 머신러닝</h3>
-            <ul>
-                <li><strong>지도:</strong> 회귀, 분류, 의사결정나무</li>
-                <li><strong>비지도:</strong> K-Means, PCA</li>
-            </ul>
+            <h3>개발 기간</h3>
+            <p>2025.10 ~ 2025.12</p>
             
-            <h3>📁 프로젝트 예시</h3>
-            <ul>
-                <li>타이타닉 생존자 예측</li>
-                <li>붓꽃 데이터 분류</li>
-                <li>주택 가격 예측</li>
-            </ul>
+            <h3>상세 내용</h3>
+            <p>R과 Python을 학습한 학습 자료와 이를 응용하여 프로젝트를 진행한 내용을 기록했습니다.</p>
         `,
         color: '#b8a2c7', tag: 'INDIVIDUAL'
     },
     
     'Django': {
-        summary: `
-            <h3>📌 프로젝트 소개</h3>
-            <p>Python Django 커뮤니티형 웹 서비스. 게시판, 인증, 댓글 시스템 구현.</p>
+        left: `
+            <h3>Django 프로젝트 소개</h3>
+            <p>Django 프레임워크를 활용한 웹 개발 프로젝트입니다. 게시판 CRUD, 로그인, 회원가입, 페이지네이션 등의 기능을 제작하였으며 Bootstrap을 사용하여 UI를 구성했습니다.</p>
             
-            <h3>🛠️ 기술 스택</h3>
+            <h3>기술 스택</h3>
             <ul>
-                <li><strong>Backend:</strong> Django 4.x, DRF</li>
-                <li><strong>Database:</strong> SQLite3, PostgreSQL</li>
-                <li><strong>Frontend:</strong> Bootstrap 5, JS</li>
+                <li><strong>Frontend: </strong> Django & Bootstrap</li>
+                <li><strong>Database:</strong> SQLite</li>
             </ul>
             
-            <h3>🔗 링크</h3>
-            <p><a href="https://github.com/TaeWoongYoun/DjangoProject" target="_blank">📂 GitHub Repository</a></p>
+            <h3>링크</h3>
+            <p>
+                <a href="https://github.com/TaeWoongYoun/DjangoProject" target="_blank">GitHub Repository</a>
+            </p>
         `,
-        body: `
-            <h3>🏗️ 아키텍처</h3>
-            <ul>
-                <li>MVT 패턴</li>
-                <li>Django ORM</li>
-                <li>자동 DB 마이그레이션</li>
-            </ul>
+        right: `
+            <div class="project-image-frame">
+                <img src="image/Django.png" alt="Django">
+            </div>
             
-            <h3>⭐ 주요 기능</h3>
-            <ul>
-                <li>회원가입, 로그인, 로그아웃</li>
-                <li>CRUD 게시판</li>
-                <li>댓글 및 대댓글</li>
-                <li>페이지네이션 및 검색</li>
-                <li>권한 검증</li>
-            </ul>
+            <h3>개발 기간</h3>
+            <p>2025.09.20 ~ 2025.12.17</p>
             
-            <h3>👤 참여 인원</h3>
-            <p>개인 프로젝트 (1인 개발)</p>
+            <h3>상세 내용</h3>
+            <p>1학년 2학기 웹프레임워크개발 수업시간에 진행된 프로젝트입니다.</p>
         `,
         color: '#f2cc8f', tag: 'INDIVIDUAL'
     },
     
-    'IE': {
-        summary: `
-            <h3>📌 프로젝트 소개</h3>
-            <p>정보처리산업기사 자격증 취득을 위한 실기 대비 이론 및 코드 저장소입니다.</p>
+    'JSP': {
+        left: `
+            <h3>JSP 프로젝트 소개</h3>
+            <p>이 프로젝트는 정보처리산업기사 실기 시험 준비를 위해 JSP와 Oracle을 활용하여 제작한 다양한 관리 프로그램 모음입니다. 각 프로그램은 select, insert, update 등의 데이터베이스 관리 기능을 포함하며, 주제에 맞춘 관리 시스템을 구축하는 연습을 목적으로 했습니다.</p>
             
-            <h3>✅ 학습 성과</h3>
+            <h3>기술 스택</h3>
             <ul>
-                <li><strong>취득:</strong> 2024년 12월 합격</li>
-                <li><strong>필기:</strong> 80점</li>
-                <li><strong>실기:</strong> 75점</li>
-                <li><strong>학습:</strong> 6개월 독학</li>
+                <li><strong>Frontend:</strong> HTML&CSS</li>
+                <li><strong>Backend:</strong> JSP</li>
+                <li><strong>Database:</strong> Oracle</li>
             </ul>
             
-            <h3>🔗 링크</h3>
-            <p><a href="https://github.com/TaeWoongYoun/IndustrialEngineer" target="_blank">📂 GitHub Repository</a></p>
+            <h3>링크</h3>
+            <p>
+                <a href="https://github.com/TaeWoongYoun/IndustrialEngineer" target="_blank">GitHub Repository</a>
+            </p>
         `,
-        body: `
-            <h3>📖 학습 범위</h3>
-            <ul>
-                <li><strong>1과목:</strong> SW 설계 (UML, SOLID)</li>
-                <li><strong>2과목:</strong> SW 개발 (API, 패키징)</li>
-                <li><strong>3과목:</strong> DB (SQL, 정규화)</li>
-                <li><strong>4과목:</strong> 프로그래밍 (Java, C)</li>
-            </ul>
+        right: `
+            <div class="project-image-frame">
+                <img src="image/JSP.png" alt="IE">
+            </div>
             
-            <h3>💻 실습 내용</h3>
-            <ul>
-                <li>기출문제 코드 구현</li>
-                <li>알고리즘 문제 풀이</li>
-                <li>실전 모의고사</li>
-            </ul>
+            <h3>학습 기간</h3>
+            <p>2024.09.01 ~ 2024.12.10</p>
             
-            <h3>🎯 향후 계획</h3>
-            <p>정보처리기사 (2025 상반기)<br>AWS Solutions Architect</p>
+            <h3>자격 사항</h3>
+            <p>정보처리산업기사 취득 : 2025.01</p>
         `,
         color: '#e58a7d', tag: 'INDIVIDUAL'
     },
     
     'Modbus': {
-        summary: `
-            <h3>📌 프로젝트 소개</h3>
-            <p>(주)두나정보기술 인턴 기간 수행한 Modbus 통신 기반 스마트 팩토리 프로젝트입니다.</p>
+        left: `
+            <h3>Modbus 프로젝트 소개</h3>
+            <p>modbus_project는 모드버스를 이용한 데이터 수집과 시각화를 목적으로 하며 웹 인터페이스를 통해 데이터를 실시간으로 모니터링할 수 있습니다.</p>
             
-            <h3>🏢 근무 정보</h3>
+            <h3>기술 스택</h3>
             <ul>
-                <li><strong>회사:</strong> (주)두나정보기술</li>
-                <li><strong>기간:</strong> 2023.08 ~ 2025.01</li>
-                <li><strong>직책:</strong> 도제 인턴</li>
+                <li><strong>Language:</strong> Python&JS&PHP</li>
+                <li><strong>Protocol:</strong> Modbus</li>
+                <li><strong>Hardware:</strong> Arduino</li>
             </ul>
             
-            <h3>🔗 링크</h3>
-            <p><a href="https://github.com/TaeWoongYoun/modbus_project" target="_blank">📂 GitHub ⭐1</a></p>
+            <h3>링크</h3>
+            <p>
+                <a href="https://github.com/TaeWoongYoun/modbus_project" target="_blank">GitHub Repository</a>
+            </p>
         `,
-        body: `
-            <h3>🛠️ 기술 스택</h3>
-            <ul>
-                <li><strong>언어:</strong> PHP, Python, JS</li>
-                <li><strong>통신:</strong> Modbus TCP/IP, RTU</li>
-                <li><strong>HW:</strong> Arduino, PLC, 센서</li>
-                <li><strong>시각화:</strong> Chart.js</li>
-            </ul>
+        right: `
+            <div class="project-image-frame">
+                <img src="image/Modbus.png" alt="Modbus">
+            </div>
             
-            <h3>⚙️ 구현 기능</h3>
-            <ul>
-                <li>온도/압력/습도 실시간 수집</li>
-                <li>PLC 코일 제어</li>
-                <li>웹 모니터링 대시보드</li>
-                <li>임계값 알람 발송</li>
-            </ul>
+            <h3>개발 기간</h3>
+            <p>2024.08 ~ 2025.01</p>
             
-            <h3>📊 성과</h3>
-            <p>수집 주기 100ms 이하<br>24시간 무중단 운영</p>
+            <h3>상세 내용</h3>
+            <p>(주)두나정보기술에서 진행한 Modbus 과제를 JS와 PHP를 사용해 시각화를 진행했던 개인 프로젝트입니다.</p>
         `,
         color: '#74a4bc', tag: 'INDIVIDUAL'
-    },
-    
-    'Winter': {
-        summary: `
-            <h3>📌 프로젝트 소개</h3>
-            <p>2024~2025 겨울방학 집중 학습 세션의 기술 스택 및 프로젝트 정리입니다.</p>
-            
-            <h3>🎯 학습 방법</h3>
-            <ul>
-                <li>매일 4시간 이상 집중 학습</li>
-                <li>이론 → 즉시 실습 적용</li>
-                <li>Notion, Tistory 정리</li>
-                <li>스터디 그룹 코드 리뷰</li>
-            </ul>
-            
-            <h3>🔗 링크</h3>
-            <p><a href="https://github.com/TaeWoongYoun/WinterSession" target="_blank">📂 GitHub Repository</a></p>
-        `,
-        body: `
-            <h3>💻 학습 주제</h3>
-            <ul>
-                <li><strong>CS:</strong> 자료구조, 알고리즘, OS</li>
-                <li><strong>FE:</strong> HTML, CSS, JS, React</li>
-                <li><strong>BE:</strong> Node.js, Spring Boot</li>
-                <li><strong>DB:</strong> MySQL, MongoDB</li>
-            </ul>
-            
-            <h3>🛠️ 개발 도구</h3>
-            <ul>
-                <li>Git/GitHub 버전 관리</li>
-                <li>Docker 기초</li>
-                <li>GitHub Actions CI/CD</li>
-            </ul>
-            
-            <h3>📁 미니 프로젝트</h3>
-            <p>TodoList, 날씨 앱, 채팅 앱</p>
-        `,
-        color: '#a8c69f', tag: 'INDIVIDUAL'
     },
 
     // ============================================
     // 2층: 팀 프로젝트 (Team Projects)
     // ============================================
-    'Progate': {
-        summary: `
-            <h3>🏆 수상 정보</h3>
-            <p><strong>🥈 준우승 (2등)</strong><br>전체 30개 팀 중</p>
+    'K-Cluture Hub': {
+        left: `
+            <h3>K-Cluture Hub 프로젝트 소개</h3>
+            <p>한국 문화와 친해질 수 있는 카드 뒤집기 게임 및 AI 학습 퀴즈 구현 (K-Cluture & AI 학습 접목)</p>
             
-            <h3>👥 팀 정보</h3>
+            <h3>기술 스택</h3>
             <ul>
-                <li><strong>팀명:</strong> 사차원 감자들</li>
-                <li><strong>인원:</strong> 4명</li>
-                <li><strong>역할:</strong> 프론트엔드 & UI/UX</li>
+                <li><strong>Frontend:</strong> TypeScirpt</li>
+                <li><strong>Backend:</strong> Node.js</li>
+                <li><strong>Database:</strong> MySQL</li>
+                <li><strong>AI:</strong> Claude, Gemini</li>
             </ul>
+
+            <h3>개발 기간</h3>
+            <p>2025.11.01 ~ 2025.11.02 (24h)</p>
             
-            <h3>📅 대회 정보</h3>
-            <p>Progate Hackathon in Seoul<br>2025.11.01~02 (24h)</p>
-            
-            <h3>🔗 링크</h3>
-            <p><a href="https://github.com/Four-potatoes/ProgateHackathon" target="_blank">📂 GitHub ⭐2</a></p>
+            <h3>링크</h3>
+            <p>
+                <a href="https://github.com/Four-potatoes/ProgateHackathon" target="_blank">GitHub Repository</a>
+            </p>
         `,
-        body: `
-            <h3>📌 프로젝트: EduPath</h3>
-            <p>AI 기반 개인 맞춤형 학습 로드맵 플랫폼</p>
+        right: `
+            <div class="project-image-frame">
+                <img src="image/Progate.png" alt="Progate">
+            </div>
             
-            <h3>🛠️ 기술 스택</h3>
+            <h3>Team : 사차원 감자들</h3>
             <ul>
-                <li><strong>FE:</strong> React, TypeScript, Tailwind</li>
-                <li><strong>BE:</strong> Firebase</li>
-                <li><strong>AI:</strong> OpenAI GPT API</li>
-                <li><strong>Host:</strong> Vercel</li>
+                <li><strong>최웅식 : </strong> 기획 및 발표 담당</li>
+                <li><strong>제준혁 : </strong> 프로그램 기능 및 개발 담당</li>
+                <li><strong>윤태웅 : </strong> PM 및 프로그램 통합 담당</li>
+                <li><strong>최성우 : </strong> 데이터셋 구성 및 디자인 담당</li>
             </ul>
-            
-            <h3>⭐ 주요 기능</h3>
-            <ul>
-                <li>AI 역량 진단 시스템</li>
-                <li>커리큘럼 자동 생성</li>
-                <li>멘토-멘티 매칭</li>
-            </ul>
-            
-            <h3>🎁 시상</h3>
-            <p>상금 100만원, Progate 1년</p>
         `,
         color: '#b8a2c7', tag: 'TEAM'
     },
     
-    'Patch': {
-        summary: `
-            <h3>📌 프로젝트 소개</h3>
-            <p>EV3 로봇 자율 주행 게임. 센서 기반 맵 인식 및 최적 경로 탐색 구현.</p>
+    'dataAnalysis': {
+        left: `
+            <h3>CountingStars 프로젝트 소개</h3>
+            <p>빅데이터활용사례를통한이해 과목의 팀 프로젝트로 ChatGPT와 Vibe Coding 이후, 개발자 생태계는 어떻게 변했는가? 라는 의문으로 데이터분석 프로젝트를 진행했습니다.</p>
             
-            <h3>👥 팀 정보</h3>
+            <h3>기술 스택</h3>
             <ul>
-                <li><strong>팀명:</strong> EV3Team</li>
-                <li><strong>소속:</strong> 인평자동차고 기능반</li>
+                <li><strong>Language:</strong> Python, Pandas, Prophet, Matplotlib</li>
+                <li><strong>Tools:</strong> Github, Jupyter Notebook</li>
             </ul>
+
+            <h3>개발 기간</h3>
+            <p>2025.11.03 ~ 2025.11.24</p>
             
-            <h3>🛠️ 기술 스택</h3>
-            <ul>
-                <li><strong>언어:</strong> C (RobotC)</li>
-                <li><strong>HW:</strong> LEGO Mindstorms EV3</li>
-            </ul>
-            
-            <h3>🔗 링크</h3>
-            <p><a href="https://github.com/EV3Team/PatchAcquisitionGame" target="_blank">📂 GitHub Repository</a></p>
+            <h3>링크</h3>
+            <p>
+                <a href="https://github.com/EV3Team/PatchAcquisitionGame" target="_blank">GitHub Repository</a> <br>
+                <a href="https://teamcountingstars.github.io/dataAnalysis/" target="_blank">Live Demo</a>
+            </p>
         `,
-        body: `
-            <h3>🎮 게임 규칙</h3>
+        right: `
+            <div class="project-image-frame">
+                <img src="image/dataAnalysis.png" alt="Patch">
+            </div>
+
+            <h3>Team : TeamCountingStars</h3>
             <ul>
-                <li><strong>목표:</strong> 최대 패치 수집</li>
-                <li><strong>제약:</strong> 장애물 회피, 배터리</li>
-                <li><strong>평가:</strong> 패치 수, 시간, 효율</li>
+                <li><strong>윤태웅 : </strong> PM(프로젝트 관리, 보고서 작성)</li>
+                <li><strong>원준서 : </strong> Data Analyst(데이터 분석, 데이터 시각화)</li>
+                <li><strong>이라온 : </strong> Data Engineer(Stackoverflow 데이터 수집, 전처리)</li>
+                <li><strong>송민찬 : </strong> Data Collector(Github 데이터 수집)</li>
             </ul>
-            
-            <h3>⚙️ 센서 시스템</h3>
-            <ul>
-                <li><strong>초음파:</strong> 장애물 감지</li>
-                <li><strong>컬러:</strong> 라인 트레이싱</li>
-                <li><strong>자이로:</strong> 회전 제어</li>
-            </ul>
-            
-            <h3>🔧 알고리즘</h3>
-            <p>PID 제어, A* 경로 탐색, 그리디</p>
-        `,
-        color: '#74a4bc', tag: 'TEAM'
-    },
-    
-    'Sensor': {
-        summary: `
-            <h3>📌 프로젝트 소개</h3>
-            <p>다양한 하드웨어 센서를 활용한 IoT 데이터 수집 및 처리 프로젝트입니다.</p>
-            
-            <h3>👥 팀 정보</h3>
-            <p><strong>팀명:</strong> EV3Team</p>
-            
-            <h3>🛠️ 기술 스택</h3>
-            <ul>
-                <li><strong>HW:</strong> Arduino, Raspberry Pi</li>
-                <li><strong>언어:</strong> C/C++, Python</li>
-                <li><strong>통신:</strong> I2C, SPI, MQTT</li>
-            </ul>
-            
-            <h3>🔗 링크</h3>
-            <p><a href="https://github.com/EV3Team/smart-sensors-assignments" target="_blank">📂 GitHub Repository</a></p>
-        `,
-        body: `
-            <h3>🔌 사용 센서</h3>
-            <ul>
-                <li><strong>환경:</strong> DHT22, MQ-135, 조도</li>
-                <li><strong>모션:</strong> 가속도계, 자이로, 초음파</li>
-                <li><strong>통신:</strong> ESP8266, Bluetooth</li>
-            </ul>
-            
-            <h3>📁 구현 프로젝트</h3>
-            <ul>
-                <li><strong>스마트홈:</strong> 온습도 모니터링</li>
-                <li><strong>모션:</strong> 낙상 감지</li>
-                <li><strong>주차:</strong> 점유 감지</li>
-            </ul>
-            
-            <h3>☁️ 클라우드</h3>
-            <p>ThingSpeak, AWS IoT Core</p>
         `,
         color: '#e58a7d', tag: 'TEAM'
     },
     
-    'MCA': {
-        summary: `
-            <h3>📌 프로젝트 소개</h3>
-            <p>마트 장바구니 데이터 분석으로 상품 연관성 파악 및 추천 시스템 구현.</p>
+    'PatchAcquisition': {
+        left: `
+            <h3>Patch Acquisition Game 프로젝트 소개</h3>
+            <p>본 프로젝트는 스마트센서와액츄에이터 팀 프로젝트로 LEGO EV3 로봇을 활용하여 격자 구조의 맵에서 패치를 획득하며 최고 점수를 달성하는 것을 목표로 합니다. 두 가지 과제로 구성되어 있으며 각각 최단경로 알고리즘과 자유경로 최적화 전략을 구현합니다.</p>
             
-            <h3>👥 팀 정보</h3>
+            <h3>기술 스택</h3>
             <ul>
-                <li><strong>팀명:</strong> ICT-Top-Bottom</li>
-                <li><strong>과목:</strong> 오픈소스SW 수업</li>
+                <li><strong>Hardware:</strong> MINDSTORMS EV3</li>
+                <li><strong>Language:</strong> RobotC</li>
             </ul>
+
+            <h3>개발 기간</h3>
+            <p>2025.11.19 ~ 2025.12.10</p>
             
-            <h3>🛠️ 기술 스택</h3>
-            <ul>
-                <li><strong>언어:</strong> Python (Jupyter)</li>
-                <li><strong>라이브러리:</strong> Pandas, NumPy</li>
-            </ul>
-            
-            <h3>🔗 링크</h3>
-            <p><a href="https://github.com/ICT-Top-Bottom/MCA" target="_blank">📂 GitHub 🍴1</a></p>
+            <h3>링크</h3>
+            <p>
+                <a href="https://github.com/EV3Team/smart-sensors-assignments" target="_blank">GitHub Repository</a> <br>
+                <a href="https://ev3team.github.io/PatchAcquisitionGame/" target="_blank">Live Demo</a>
+            </p>
         `,
-        body: `
-            <h3>📊 분석 기법</h3>
+        right: `
+            <div class="project-image-frame">
+                <img src="image/PatchAcquisition.png" alt="PatchAcquisition">
+            </div>
+
+            <h3>Team : EV3Team</h3>
             <ul>
-                <li>Market Basket Analysis</li>
-                <li>Apriori, FP-Growth</li>
+                <li><strong>윤태웅 : </strong> PM</li>
+                <li><strong>박재형 : </strong> 프로젝트 개발</li>
+                <li><strong>이현빈 : </strong> 프로젝트 개발</li>
+                <li><strong>조 민 : </strong> PPT 제작 및 발표</li>
+                <li><strong>전민석 : </strong> PPT 제작 및 발표</li>
+            </ul>
+        `,
+        color: '#74a4bc', tag: 'TEAM'
+    },
+    
+    'MCA': {
+        left: `
+            <h3>MCA프로젝트 소개</h3>
+            <p>본 프로젝트는 YOLO11 딥러닝 모델을 활용하여 CCTV 환경에서 쇼핑 카트의 상태(fully/empty/combined)를 자동으로 탐지하고 분류하는 실시간 시스템입니다. Instance Segmentation 기술을 통해 카트의 정밀한 윤곽선 정보까지 제공하며, 고해상도 처리로 원거리 객체 탐지 능력을 향상시켰습니다.</p>
+            
+            <h3>기술 스택</h3>
+            <ul>
+                <li><strong>Language:</strong> Python</li>
+                <li><strong>Library:</strong> YOLO11, OpenCV, PyTorch</li>
+                <li><strong>Tool:</strong> Kaggle, Roboflow</li>
             </ul>
             
-            <h3>📈 주요 지표</h3>
-            <ul>
-                <li><strong>지지도:</strong> 동시 구매 빈도</li>
-                <li><strong>신뢰도:</strong> 조건부 확률</li>
-                <li><strong>향상도:</strong> 연관성 강도</li>
-            </ul>
+            <h3>링크</h3>
+            <p>
+                <a href="https://github.com/ICT-Top-Bottom/MCA" target="_blank">GitHub Repository</a> <br>
+                <a href="https://github.com/ICT-Top-Bottom/MCA-Appendix" target="_blank">MCA Appendix</a> <br>
+                <a href="https://ict-top-bottom.github.io/MCA/" target="_blank">Live Demo</a>
+            </p>
+        `,
+        right: `
+            <div class="project-image-frame">
+                <img src="image/MCA.png" alt="MCA">
+            </div>
             
-            <h3>⭐ 결과물</h3>
+            <h3>개발 기간</h3>
+            <p>2025.11.05 ~ 2025.12.22</p>
+            
+            <h3>Team : ICT-Top-Bottom</h3>
             <ul>
-                <li>상품 추천 알고리즘</li>
-                <li>연관 규칙 시각화</li>
-                <li>분석 보고서</li>
+                <li><strong>윤태웅</strong></li>
+                <li><strong>박재형</strong></li>
             </ul>
         `,
         color: '#a8c69f', tag: 'TEAM'
     },
     
-    'Suin': {
-        summary: `
-            <h3>📌 프로젝트 소개</h3>
-            <p>수인분당선 실시간 열차 위치 및 도착 정보 제공 웹 서비스입니다.</p>
+    'SuinBundang': {
+        left: `
+            <h3>SuinBundang 프로젝트 소개</h3>
+            <p>웹애플리케이션개발 팀 프로젝트로 진행될 뻔 했던 프로젝트. 수인분당선 노선을 html과 css로만 만든 웹페이지 제작</p>
             
-            <h3>👥 팀 정보</h3>
+            <h3>기술 스택</h3>
             <ul>
-                <li><strong>팀명:</strong> SuinBundang</li>
-                <li><strong>인원:</strong> 3명</li>
-                <li><strong>역할:</strong> 프론트엔드 & API</li>
+                <li><strong>Frontend:</strong> HTML&CSS</li>
             </ul>
             
-            <h3>🛠️ 기술 스택</h3>
-            <ul>
-                <li><strong>FE:</strong> React, Redux, Leaflet</li>
-                <li><strong>BE:</strong> Node.js, Express</li>
-            </ul>
-            
-            <h3>🔗 링크</h3>
-            <p><a href="https://github.com/SuinBundang/SuinBundang" target="_blank">📂 GitHub Repository</a></p>
+            <h3>링크</h3>
+            <p>
+                <a href="https://github.com/SuinBundang/SuinBundang" target="_blank">GitHub Repository</a> <br>
+                <a href="https://suinbundang.github.io/SuinBundang/" target="_blank">Live Demo</a>
+            </p>
         `,
-        body: `
-            <h3>🔌 API 연동</h3>
-            <ul>
-                <li>서울시 실시간 지하철 API</li>
-                <li>Kakao Map API</li>
-                <li>5초 폴링 + WebSocket</li>
-            </ul>
+        right: `
+            <div class="project-image-frame">
+                <img src="image/Suin.png" alt="Suin">
+            </div>
             
-            <h3>⭐ 주요 기능</h3>
-            <ul>
-                <li>실시간 열차 위치</li>
-                <li>평일/주말 시간표</li>
-                <li>최단 경로 안내</li>
-                <li>역 즐겨찾기</li>
-            </ul>
+            <h3>개발 기간</h3>
+            <p>2025.12.23 ~ 2025.12.26</p>
             
-            <h3>🚀 배포</h3>
-            <p>AWS EC2, Nginx</p>
+            <h3>상세 내용</h3>
+            <p>갑작스럽게 팀이 변경되어 팀을 추억하기 위해 개인 프로젝트로 간단하게 디자인만 했던 프로젝트입니다.</p>
         `,
         color: '#f2cc8f', tag: 'TEAM'
     },
     
-    'WebApplication': {
-        summary: `
-            <h3>📌 프로젝트 소개</h3>
-            <p>실생활에 유용한 다목적 웹 서비스 팀 프로젝트입니다.</p>
+    'WAD': {
+        left: `
+            <h3>WAD 프로젝트 소개</h3>
+            <p>본 프로젝트는 사용자의 이력 정보를 기반으로 이력서 작성, 포트폴리오 탐색, 디지털 명함 공유까지 하나의 흐름으로 제공하는 인터랙티브 웹 애플리케이션입니다. HTML, CSS, JavaScript만을 사용하여 개발되었으며, 로컬스토리지를 활용한 데이터 저장, PDF 다운로드 기능, 동적 UI 생성 등 다양한 기능을 제공합니다.</p>
             
-            <h3>👥 팀 정보</h3>
+            <h3>기술 스택</h3>
             <ul>
-                <li><strong>팀명:</strong> HYU-DreamTeam</li>
-                <li><strong>인원:</strong> 6명</li>
-                <li><strong>역할:</strong> 프론트엔드 리드</li>
+                <li><strong>Frontend:</strong> HTML&CSS&JS</li>
+                <li><strong>Tool:</strong> Notion, Figma, Github, Canva</li>
             </ul>
             
-            <h3>🔄 개발 프로세스</h3>
-            <ul>
-                <li>애자일 (2주 스프린트)</li>
-                <li>Jira 이슈 트래킹</li>
-                <li>GitHub PR 코드 리뷰</li>
-            </ul>
-            
-            <h3>🔗 링크</h3>
-            <p><a href="https://github.com/HYU-DreamTeam/WebApplication" target="_blank">📂 GitHub Repository</a></p>
+            <h3>링크</h3>
+            <p>
+                <a href="https://github.com/HYU-DreamTeam/WebApplication" target="_blank">GitHub Repository</a> <br>
+                <a href="https://hyu-dreamteam.github.io/WAD-Demo/" target="_blank">Live Demo</a>
+            </p>
         `,
-        body: `
-            <h3>🛠️ 기술 스택</h3>
-            <ul>
-                <li><strong>FE:</strong> React 18, Context API</li>
-                <li><strong>Style:</strong> Styled-components</li>
-                <li><strong>BE:</strong> Spring Boot, JPA</li>
-                <li><strong>DB:</strong> MySQL 8.0</li>
-                <li><strong>Auth:</strong> Spring Security, JWT</li>
-            </ul>
+        right: `
+            <div class="project-image-frame">
+                <img src="image/WebApplication.png" alt="WebApplication">
+            </div>
             
-            <h3>⭐ 구현 기능</h3>
+            <h3>개발 기간</h3>
+            <p>2025.12.23 ~ 2026.01.10</p>
+            
+            <h3>Team : HYU-DreamTeam</h3>
             <ul>
-                <li><strong>생산성:</strong> Todo, 타이머</li>
-                <li><strong>유틸:</strong> 환율, 단위변환</li>
-                <li><strong>엔터:</strong> 게임, 날씨</li>
+                <li><strong>박재형 : </strong> Portfolio Page 제작</li>
+                <li><strong>윤태웅 : </strong> Resume Page 제작</li>
+                <li><strong>원준서 : </strong> Care Page 제작</li>
+                <li><strong>이주혜 : </strong> Main Page 제작</li>
             </ul>
         `,
         color: '#b8a2c7', tag: 'TEAM'
-    },
-    
-    'DataAnalysis': {
-        summary: `
-            <h3>📌 프로젝트 소개</h3>
-            <p>공공 데이터를 활용한 사회 현상 분석 및 인사이트 도출 프로젝트입니다.</p>
-            
-            <h3>👥 팀 정보</h3>
-            <ul>
-                <li><strong>팀명:</strong> TeamCountingStars</li>
-                <li><strong>인원:</strong> 4명</li>
-                <li><strong>역할:</strong> 전처리, 시각화</li>
-            </ul>
-            
-            <h3>🛠️ 기술 스택</h3>
-            <ul>
-                <li><strong>언어:</strong> Python 3.10</li>
-                <li><strong>도구:</strong> Jupyter, Colab</li>
-            </ul>
-            
-            <h3>🔗 링크</h3>
-            <p><a href="https://github.com/TeamCountingStars/dataAnalysis" target="_blank">📂 GitHub Repository</a></p>
-        `,
-        body: `
-            <h3>📚 라이브러리</h3>
-            <ul>
-                <li><strong>데이터:</strong> Pandas, NumPy</li>
-                <li><strong>시각화:</strong> Matplotlib, Plotly</li>
-                <li><strong>ML:</strong> Scikit-learn, XGBoost</li>
-            </ul>
-            
-            <h3>📊 분석 주제</h3>
-            <ul>
-                <li>서울시 생활인구 패턴</li>
-                <li>대중교통 이용 패턴</li>
-                <li>부동산 가격 예측 (R²: 0.85)</li>
-            </ul>
-            
-            <h3>📈 결과물</h3>
-            <p>분석 보고서 3건<br>정책 제안</p>
-        `,
-        color: '#e58a7d', tag: 'TEAM'
     },
 
     // ============================================
     // 3층: 대외활동 (External Activities)
     // ============================================
     'Cert': {
-        summary: `
-            <h3>🏆 정보처리산업기사</h3>
-            <ul>
-                <li><strong>취득:</strong> 2024년 12월</li>
-                <li><strong>발급:</strong> 한국산업인력공단</li>
-                <li><strong>필기:</strong> 80점 / <strong>실기:</strong> 75점</li>
-            </ul>
+        left: `
+            <h3>자격증</h3>
+            <p>취득한 자격증입니다.</p>
             
-            <h3>🏆 웹디자인기능사</h3>
+            <h3>항목</h3>
             <ul>
-                <li><strong>취득:</strong> 2025년 1월</li>
-                <li><strong>발급:</strong> 한국산업인력공단</li>
-                <li><strong>평가:</strong> HTML/CSS/JS 웹사이트</li>
+                <li><strong>정보처리산업기사</strong> </li>
+                <li><strong>웹디자인개발기능사</strong> </li>
+                <li><strong>운전면허</strong> </li>
             </ul>
         `,
-        body: `
-            <h3>📚 학습 과정</h3>
+        right: `
+            <h3>정보처리산업기사</h3>
             <ul>
-                <li><strong>정보처리:</strong> 6개월 독학 (3h/day)</li>
-                <li><strong>웹디자인:</strong> 3개월 실습 위주</li>
-                <li>기출 반복 + 모의고사</li>
-                <li>스터디 그룹 (5명)</li>
+                <li><strong>취득일 : </strong> 2025.01</li>
+                <li><strong>발급기관 : </strong> 한국산업인력공단</li>
             </ul>
-            
-            <h3>💡 활용</h3>
+
+            <h3>웹디자인개발기능사</h3>
             <ul>
-                <li>SW 개발 직무 우대</li>
-                <li>공공기관 가산점</li>
-            </ul>
-            
-            <h3>🎯 향후 계획</h3>
-            <ul>
-                <li>정보처리기사</li>
-                <li>AWS Solutions Architect</li>
+                <li><strong>취득일 : </strong> 2024.12</li>
+                <li><strong>발급기관 : </strong> 한국산업인력공단</li>
             </ul>
         `,
         color: '#f2cc8f', tag: 'ACTIVITY'
     },
     
     'Paper': {
-        summary: `
-            <h3>📄 논문 정보</h3>
+        left: `
+            <h3>논문 소개</h3>
+            <p style="font-size: 10px;">AI 기반 사용자 맞춤형 공지사항 통합 알림 시스템은 대학의 현장실습 및 산학연계 프로그램에 참여하는 학부생들이 학
+교와 참여기업의 공지사항을 실시간으로 확인할 수 있도록 지원하는 지능형 프로그램이다. 기존에는 각 웹사이트를 개별
+적으로 방문해야 하는 번거로움이 있었으나, 본 시스템은 사용자가 참여기업을 선택하거나 공지사항 URL을 입력하면 설
+정된 주기에 따라 해당 페이지를 자동으로 크롤링하고 새로운 공지 등록 시 카카오톡 알림톡 또는 문자메시지로 즉시 전
+달한다. 더 나아가 사용자의 공지사항 클릭 패턴을 AI로 분석하여 개인별 관심 키워드를 자동 추출하고 학과별 인기 공
+지사항을 상단에 우선 배치하는 지능형 태깅 시스템을 구현하였다.</p>
+            
+            <h3>기술 스택</h3>
             <ul>
-                <li><strong>제목:</strong> AI기반 맞춤형 공지사항 통합 알림 시스템</li>
-                <li><strong>저자:</strong> 윤태웅 (제1저자)</li>
-                <li><strong>학회:</strong> KCC 2025</li>
-                <li><strong>작성:</strong> 2025년 7월</li>
-                <li><strong>발표:</strong> 제주 ICC</li>
+                <li><strong>학회:</strong> 한국정보과학회 학부생논문</li>
+                <li><strong>주제:</strong> AI 기반 사용자 맞춤형 공지사항 통합 알림 시스템</li>
             </ul>
+            
+            <h3>링크</h3>
+            <p>
+                <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12318711" target="_blank">논문 링크</a>
+            </p>
         `,
-        body: `
-            <h3>🔬 연구 배경</h3>
-            <p>여러 플랫폼에 흩어진 공지사항 확인 어려움 해결</p>
+        right: `
+            <div class="project-image-frame">
+                <img src="image/Paper.png" alt="Paper">
+            </div>
             
-            <h3>💡 제안 시스템</h3>
-            <ul>
-                <li><strong>AI 분류:</strong> NLP 중요도 분석</li>
-                <li><strong>맞춤 알림:</strong> 관심 프로파일링</li>
-                <li><strong>통합:</strong> 전체 공지 한 화면</li>
-            </ul>
+            <h3>작성 기간</h3>
+            <p>2025.04 ~ 2025.07</p>
             
-            <h3>🔧 기술 스택</h3>
-            <ul>
-                <li><strong>NLP:</strong> KoBERT</li>
-                <li><strong>BE:</strong> FastAPI, Redis</li>
-                <li><strong>App:</strong> React Native</li>
-            </ul>
+            <h3>상세 내용</h3>
+            <p>1학년 1학기 프로그래밍설계방법론 과제로 진행된 논문입니다.</p>
         `,
         color: '#e58a7d', tag: 'ACTIVITY'
     },
     
-    'Hackathon': {
-        summary: `
-            <h3>🏆 Progate Hackathon</h3>
+    'Conference': {
+        left: `
+            <h3>WLMS프로젝트 소개</h3>
+            <p>본 연구는 게임화 기법을 활용한 웹 개발 학습 플랫폼을 설계하고 구현하였습니다. 티어 시스템과 GitHub 자동 연동을 통해 학생들의 자발적 학습 참여를 이끌어냈으며 실제로 학생들의 높은 참여율과 새벽 시간 학습 참여를 통해 그 효과를 입증하였습니다. 향후 AI 기반 자동화 기능 도입과 범용 플랫폼으로의 확장을 계획하고 있습니다.</p>
+            
+            <h3>세부 사항</h3>
             <ul>
-                <li><strong>수상:</strong> 🥈 준우승 (2등)</li>
-                <li><strong>일시:</strong> 2025.11.01~02 (24h)</li>
-                <li><strong>팀:</strong> 사차원 감자들 (4명)</li>
-                <li><strong>규모:</strong> 30팀, 약 120명</li>
+                <li><strong>학술대회:</strong> 2025년 한양대학교 SW/ICT/AI 종합학술대회 참가</li>
+                <li><strong>세션:</strong> 404 Not Found Session</li>
             </ul>
             
-            <h3>🎁 시상 내역</h3>
+            <h3>링크</h3>
+            <p>
+                <a href="https://github.com/TaeWoongYoun/LMS" target="_blank">프로젝트 Github 링크</a>
+            </p>
+        `,
+        right: `
+            <div class="project-image-frame">
+                <img src="image/Conference.png" alt="Conference">
+            </div>
+            
+            <h3>개발 기간</h3>
+            <p>2024.12 ~ 2025.11</p>
+            
+            <h3>상세 내용</h3>
+            <p>기존에 사이드프로젝트로 개발했던 LMS프로젝트를 학술대회에서 발표하기 위해 기능을 추가하고 보완했습니다.</p>
+        `,
+        color: '#a8c69f', tag: 'ACTIVITY'
+    },
+
+'SkillsCompetitions': {
+    left: `
+        <h3>Skills Competitions</h3>
+        <p>전국 및 지방 기능경기대회 웹 개발 종목 입상 기록입니다.</p>
+        
+        <h3>기술 스택</h3>
+        <ul>
+            <li><strong>Web Publishing:</strong> HTML5 & CSS3</li>
+            <li><strong>Frontend:</strong> JavaScript </li>
+            <li><strong>Backend:</strong> PHP </li>
+            <li><strong>Database:</strong> MySQL (XAMPP Environment)</li>
+        </ul>
+    `,
+    right: `
+        <h3>준비 기간</h3>
+        <p>2023.08 ~ 2024.08</p>
+        
+        <h3>인천기능경기대회</h3>
+        <ul>
+            <li><strong>Date:</strong> 2024.04</li>
+            <li><strong>Award:</strong> 금메달</li>
+        </ul>
+
+        <h3>전국기능경기대회</h3>
+        <ul>
+            <li><strong>Date:</strong> 2024.08</li>
+            <li><strong>Award:</strong> 장려상(11등)</li>
+        </ul>
+    `,
+    color: '#b8a2c7', tag: 'ACTIVITY'
+},
+    
+    'HYAI': {
+        left: `
+            <h3>소개</h3>
+            <p>한양대 ERICA 인공지능 학회인 HYAI에서 활동한 내용입니다.</p>
+            
+            <h3>활동 내용</h3>
             <ul>
-                <li>상금: 100만원</li>
-                <li>Progate 1년 멤버십</li>
-                <li>채용 연계 기회</li>
+                <li><strong>알고리즘 스터디:</strong> 2025.04 ~ 2025.06 </li>
+                <li><strong>Python 스터디:</strong> 2025.04 ~ 2025.06 </li>
+                <li><strong>프로젝트 개발 스터디:</strong> 2025.05 ~ 2025.08</li>
+                <li><strong>의료ai 스터디:</strong> 2025.10 ~ 2025.12</li>
+                <li><strong>논문 리뷰 스터디:</strong> 2025.11</li>
             </ul>
         `,
-        body: `
-            <h3>💻 프로젝트: EduPath</h3>
-            <p>AI 기반 학습 로드맵 플랫폼</p>
+        right: `
+            <h3>알고리즘 스터디</h3>
+            <p>프로그래머스 Python 문제를 풀고 리뷰했습니다.</p>
+
+            <h3>Python 스터디</h3>
+            <p>Python 기초 문법과 실습을 진행했습니다.</p>
+
+            <h3>프로젝트 개발 스터디</h3>
+            <p>YOLO 기초 문법을 학습하고 하냥이 캐릭터를 학습시켰습니다.</p>
             
-            <h3>🛠️ 기술 스택</h3>
-            <ul>
-                <li><strong>FE:</strong> React, TypeScript</li>
-                <li><strong>BE:</strong> Firebase</li>
-                <li><strong>AI:</strong> OpenAI GPT-4</li>
-            </ul>
+            <h3>의료ai 스터디</h3>
+            <p>뇌를 바꾼 공학 공학의 바꾼 뇌 책을 읽으며 의료 AI 기술에 대해 학습하고 토론을 진행했습니다.</p>
             
-            <h3>🎤 발표</h3>
-            <p>7분 발표 + 3분 Q&A<br>MVP 데모 시연</p>
-            
-            <h3>💪 성공 요인</h3>
-            <p>명확한 문제 정의<br>24h 내 MVP 완성<br>효과적인 팀워크</p>
+            <h3>논문 리뷰 스터디</h3>
+            <p>CS분야 논문을 각자 읽고 리뷰합니다.</p>
         `,
         color: '#74a4bc', tag: 'ACTIVITY'
     },
     
-    'Academic': {
-        summary: `
-            <h3>📚 학술대회 정보</h3>
-            <ul>
-                <li><strong>대회:</strong> 2025 한양대 SW/ICT/AI 종합학술대회</li>
-                <li><strong>일시:</strong> 2025년 11월</li>
-                <li><strong>장소:</strong> ERICA 학술정보관</li>
-            </ul>
-            
-            <h3>🎯 참가 세션</h3>
-            <ul>
-                <li><strong>세션:</strong> 404 Not Found</li>
-                <li><strong>형식:</strong> 15분 발표 + 5분 Q&A</li>
-            </ul>
-        `,
-        body: `
-            <h3>💻 발표 프로젝트</h3>
-            <p><strong>W-LMS:</strong> React 기반 학습 관리 시스템</p>
-            
-            <h3>📊 발표 구성</h3>
-            <ol>
-                <li>프로젝트 배경</li>
-                <li>시스템 설계</li>
-                <li>주요 기능 데모</li>
-                <li>배포 전략</li>
-                <li>향후 계획</li>
-            </ol>
-            
-            <h3>💡 성과</h3>
-            <ul>
-                <li>프로젝트 객관적 정리</li>
-                <li>발표 능력 향상</li>
-                <li>네트워킹</li>
-            </ul>
-        `,
-        color: '#a8c69f', tag: 'ACTIVITY'
-    },
-    
-    'HYAI': {
-        summary: `
-            <h3>🤖 HYAI 소개</h3>
-            <ul>
-                <li><strong>학회:</strong> 한양대 인공지능 학회</li>
-                <li><strong>소속:</strong> ERICA 캠퍼스</li>
-                <li><strong>활동:</strong> 2025.03 ~ 현재</li>
-            </ul>
-            
-            <h3>🏆 학회 내 활동</h3>
-            <ul>
-                <li>신입생 멘토링</li>
-                <li>학회 홈페이지 개발</li>
-                <li>해커톤 기획/운영진</li>
-            </ul>
-        `,
-        body: `
-            <h3>📚 참여 스터디</h3>
-            <ul>
-                <li><strong>알고리즘</strong> (04~06)</li>
-                <li><strong>Python</strong> (04~06)</li>
-                <li><strong>프로젝트 개발</strong> (05~08)</li>
-                <li><strong>의료 AI</strong> (10~12)</li>
-                <li><strong>논문 리뷰</strong> (11~)</li>
-            </ul>
-            
-            <h3>🎓 정규 세미나</h3>
-            <ul>
-                <li>월 1회 정기 세미나</li>
-                <li>초청 연사 특강</li>
-            </ul>
-            
-            <h3>🎯 향후 계획</h3>
-            <p>2026년 HYAI 운영진 지원</p>
-        `,
-        color: '#b8a2c7', tag: 'ACTIVITY'
-    },
-    
     'HYEND': {
-        summary: `
-            <h3>💻 HY-END 소개</h3>
-            <ul>
-                <li><strong>학회:</strong> 한양대 웹 개발 학회</li>
-                <li><strong>소속:</strong> ERICA 캠퍼스</li>
-                <li><strong>활동:</strong> 2025.09 ~ 12</li>
-                <li><strong>등급:</strong> 정회원</li>
-            </ul>
+        left: `
+            <h3>소개</h3>
+            <p>한양대학교 ERICA 웹개발 학회인 HY-END에서 활동한 내용입니다.</p>
             
-            <h3>🏆 성과</h3>
+            <h3>활동 내용</h3>
             <ul>
-                <li>React 프로젝트 3개</li>
-                <li>우수 회원 선정</li>
-                <li>해커톤 최우수상</li>
+                <li><strong>React 스터디:</strong> 2025.09 ~ 2025.12</li>
             </ul>
         `,
-        body: `
-            <h3>🎯 React 실무 스터디</h3>
-            <ul>
-                <li><strong>기간:</strong> 2025.09~12 (16주)</li>
-                <li><strong>방식:</strong> 주 1회 세미나</li>
-            </ul>
-            
-            <h3>📚 학습 내용</h3>
-            <ul>
-                <li><strong>Hooks:</strong> useState, useEffect</li>
-                <li><strong>상태:</strong> Redux, Zustand</li>
-                <li><strong>라우팅:</strong> React Router v6</li>
-                <li><strong>스타일:</strong> Tailwind CSS</li>
-            </ul>
-            
-            <h3>🎯 향후 계획</h3>
-            <p>2026년 운영진 지원<br>Next.js, TypeScript 심화</p>
+        right: `
+            <h3>React 스터디</h3>
+            <p>React 기초 문법과 학술대회를 준비했습니다.</p>
         `,
         color: '#e58a7d', tag: 'ACTIVITY'
     }
@@ -845,8 +627,8 @@ function openBook(id) {
     document.getElementById('modalTitleInside').innerText = id;
     document.getElementById('modalTitleCover').innerText = id;
     document.getElementById('coverTag').innerText = data.tag;
-    document.getElementById('modalSummary').innerHTML = data.summary;
-    document.getElementById('modalBody').innerHTML = data.body;
+    document.getElementById('modalSummary').innerHTML = data.left;
+    document.getElementById('modalBody').innerHTML = data.right;
     document.getElementById('modalCover').style.backgroundColor = data.color;
 
     modal.style.display = 'flex';
@@ -866,3 +648,7 @@ window.onclick = (e) => {
     const modal = document.getElementById('bookModal');
     if (e.target === modal) closeBook();
 };
+
+document.getElementById('modalContainer').addEventListener('click', function(e) {
+    e.stopPropagation(); // 클릭 이벤트가 부모(배경)로 퍼지는 것을 막음
+});
