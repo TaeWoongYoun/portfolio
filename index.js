@@ -407,13 +407,16 @@ const bookData = {
     'WAD': {
         left: `
             <h3>WAD 프로젝트 소개</h3>
-            <p>본 프로젝트는 사용자의 이력 정보를 기반으로 이력서 작성, 포트폴리오 탐색, 디지털 명함 공유까지 하나의 흐름으로 제공하는 인터랙티브 웹 애플리케이션입니다. HTML, CSS, JavaScript만을 사용하여 개발되었으며, 로컬스토리지를 활용한 데이터 저장, PDF 다운로드 기능, 동적 UI 생성 등 다양한 기능을 제공합니다.</p>
+            <p>본 프로젝트는 이력서, 포트폴리오, 명함 템플릿을 제공하는 웹 애플리케이션입니다. HTML, CSS, JavaScript만을 사용하여 개발되었으며, 로컬스토리지를 활용한 데이터 저장, PDF 다운로드 기능, 동적 UI 생성 등 다양한 기능을 제공합니다.</p>
             
             <h3>기술 스택</h3>
             <ul>
                 <li><strong>Frontend:</strong> HTML&CSS&JS</li>
                 <li><strong>Tool:</strong> Notion, Figma, Github, Canva</li>
             </ul>
+
+            <h3>개발 기간</h3>
+            <p>2025.12.23 ~ 2026.01.10</p>
             
             <h3>링크</h3>
             <p>
@@ -425,9 +428,6 @@ const bookData = {
             <div class="project-image-frame">
                 <img src="image/WebApplication.png" alt="WebApplication">
             </div>
-            
-            <h3>개발 기간</h3>
-            <p>2025.12.23 ~ 2026.01.10</p>
             
             <h3>Team : HYU-DreamTeam</h3>
             <ul>
