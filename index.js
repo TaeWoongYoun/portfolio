@@ -536,37 +536,37 @@ const bookData = {
         color: '#a8c69f', tag: 'ACTIVITY'
     },
 
-'SkillsCompetitions': {
-    left: `
-        <h3>Skills Competitions</h3>
-        <p>전국 및 지방 기능경기대회 웹 개발 종목 입상 기록입니다.</p>
-        
-        <h3>기술 스택</h3>
-        <ul>
-            <li><strong>Web Publishing:</strong> HTML5 & CSS3</li>
-            <li><strong>Frontend:</strong> JavaScript </li>
-            <li><strong>Backend:</strong> PHP </li>
-            <li><strong>Database:</strong> MySQL (XAMPP Environment)</li>
-        </ul>
-    `,
-    right: `
-        <h3>준비 기간</h3>
-        <p>2023.08 ~ 2024.08</p>
-        
-        <h3>인천기능경기대회</h3>
-        <ul>
-            <li><strong>Date:</strong> 2024.04</li>
-            <li><strong>Award:</strong> 금메달</li>
-        </ul>
+    'SkillsCompetitions': {
+        left: `
+            <h3>Skills Competitions</h3>
+            <p>웹디자인 및 개발 전국 및 지방 기능경기대회 입상 기록입니다.</p>
+            
+            <h3>기술 스택</h3>
+            <ul>
+                <li><strong>Web Publishing:</strong> HTML5 & CSS3</li>
+                <li><strong>Frontend:</strong> JavaScript </li>
+                <li><strong>Backend:</strong> PHP </li>
+                <li><strong>Database:</strong> MySQL (XAMPP Environment)</li>
+            </ul>
+        `,
+        right: `
+            <h3>준비 기간</h3>
+            <p>2023.08 ~ 2024.08</p>
+            
+            <h3>웹디자인 및 개발인천기능경기대회</h3>
+            <ul>
+                <li><strong>Date:</strong> 2024.04</li>
+                <li><strong>Award:</strong> 금메달</li>
+            </ul>
 
-        <h3>전국기능경기대회</h3>
-        <ul>
-            <li><strong>Date:</strong> 2024.08</li>
-            <li><strong>Award:</strong> 장려상(11등)</li>
-        </ul>
-    `,
-    color: '#b8a2c7', tag: 'ACTIVITY'
-},
+            <h3>웹디자인 및 개발 전국기능경기대회</h3>
+            <ul>
+                <li><strong>Date:</strong> 2024.08</li>
+                <li><strong>Award:</strong> 장려상(11등)</li>
+            </ul>
+        `,
+        color: '#b8a2c7', tag: 'ACTIVITY'
+    },
     
     'HYAI': {
         left: `
@@ -616,7 +616,28 @@ const bookData = {
             <p>React 기초 문법과 학술대회를 준비했습니다.</p>
         `,
         color: '#e58a7d', tag: 'ACTIVITY'
-    }
+    },
+
+    'Lectures': {
+        left: `
+            <h3>소개</h3>
+            <p>외부 강사 활동 내용입니다.</p>
+            
+            <h3>활동 내용</h3>
+            <ul>
+                <li><strong>웹디자인 및 개발 전국기능경기대회 인천 강사:</strong> <br>2025.08.04 ~ 2025.08.08 </li>
+                <li><strong>인평자동차고 2025학년도 졸업생 멘토링 발자취 강사:</strong> <br>2025.10.29 </li>
+            </ul>
+        `,
+        right: `
+            <h3>웹디자인 및 개발 전국기능경기대회 인천 강사</h3>
+            <p>전국기능경기대회 문제를 함께 풀어주고 지도해주며 최종적으로 수강생 전원이 전국대회에서 입상했습니다.</p>
+
+            <h3>인평자동차고 2025학년도 졸업생 멘토링 발자취 강사</h3>
+            <p>고등학교때의 생활과 대학에서의 생활을 설명해주었으며 학생들의 진로를 지도했습니다..</p>
+        `,
+        color: '#74a4bc', tag: 'ACTIVITY'
+    },
 };
 
 function openBook(id) {
