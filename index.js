@@ -474,12 +474,7 @@ const bookData = {
     'Paper': {
         left: `
             <h3>논문 소개</h3>
-            <p style="font-size: 10px;">AI 기반 사용자 맞춤형 공지사항 통합 알림 시스템은 대학의 현장실습 및 산학연계 프로그램에 참여하는 학부생들이 학
-교와 참여기업의 공지사항을 실시간으로 확인할 수 있도록 지원하는 지능형 프로그램이다. 기존에는 각 웹사이트를 개별
-적으로 방문해야 하는 번거로움이 있었으나, 본 시스템은 사용자가 참여기업을 선택하거나 공지사항 URL을 입력하면 설
-정된 주기에 따라 해당 페이지를 자동으로 크롤링하고 새로운 공지 등록 시 카카오톡 알림톡 또는 문자메시지로 즉시 전
-달한다. 더 나아가 사용자의 공지사항 클릭 패턴을 AI로 분석하여 개인별 관심 키워드를 자동 추출하고 학과별 인기 공
-지사항을 상단에 우선 배치하는 지능형 태깅 시스템을 구현하였다.</p>
+            <p style="font-size: 10px;">AI 기반 사용자 맞춤형 공지사항 통합 알림 시스템은 대학의 현장실습 및 산학연계 프로그램에 참여하는 학부생들이 학교와 참여기업의 공지사항을 실시간으로 확인할 수 있도록 지원하는 지능형 프로그램이다. 기존에는 각 웹사이트를 개별적으로 방문해야 하는 번거로움이 있었으나, 본 시스템은 사용자가 참여기업을 선택하거나 공지사항 URL을 입력하면 설정된 주기에 따라 해당 페이지를 자동으로 크롤링하고 새로운 공지 등록 시 카카오톡 알림톡 또는 문자메시지로 즉시 전달한다.</p>
             
             <h3>기술 스택</h3>
             <ul>
@@ -665,11 +660,133 @@ function closeBook() {
     }, 1000);
 }
 
-window.onclick = (e) => {
+// 모달 클릭 이벤트 - 책 영역 외부 클릭 시에만 닫기
+document.getElementById('bookModal').addEventListener('click', function(e) {
     const modal = document.getElementById('bookModal');
-    if (e.target === modal) closeBook();
-};
-
-document.getElementById('modalContainer').addEventListener('click', function(e) {
-    e.stopPropagation(); // 클릭 이벤트가 부모(배경)로 퍼지는 것을 막음
+    
+    // 닫기 버튼 클릭 시
+    if (e.target.closest('.close-btn')) {
+        return;
+    }
+    
+    // 모달이 열린 상태가 아니면
+    if (!modal.classList.contains('open')) {
+        if (e.target === modal) closeBook();
+        return;
+    }
+    
+    // 우측 페이지 내부 클릭은 정상 동작 (링크 등)
+    if (e.target.closest('.page-right')) {
+        return;
+    }
+    
+    // 책이 펼쳐진 상태에서 클릭 좌표로 판단
+    const bookContainer = document.querySelector('.book-container');
+    const rect = bookContainer.getBoundingClientRect();
+    
+    const bookWidth = 450;
+    const leftPageLeft = rect.left - bookWidth;
+    const leftPageRight = rect.left;
+    const rightPageRight = rect.right;
+    const bookTop = rect.top;
+    const bookBottom = rect.bottom;
+    
+    const clickX = e.clientX;
+    const clickY = e.clientY;
+    
+    // 좌측 페이지 영역 클릭 여부
+    const isLeftPage = clickX >= leftPageLeft && 
+                       clickX < leftPageRight && 
+                       clickY >= bookTop && 
+                       clickY <= bookBottom;
+    
+    // 우측 페이지 영역 클릭 여부
+    const isRightPage = clickX >= leftPageRight && 
+                        clickX <= rightPageRight && 
+                        clickY >= bookTop && 
+                        clickY <= bookBottom;
+    
+    if (isLeftPage) {
+        // 좌측 페이지 클릭: 클릭 좌표를 원래 DOM 위치로 변환
+        // 시각적 좌측 페이지 = DOM상 page-fold의 back 면
+        // 변환: 시각적 X좌표를 DOM상 X좌표로 매핑
+        // 시각적 좌측 페이지의 왼쪽 끝(leftPageLeft) -> DOM상 우측 끝(rect.right)
+        // 시각적 좌측 페이지의 오른쪽 끝(leftPageRight) -> DOM상 왼쪽 끝(rect.left)
+        const relativeX = clickX - leftPageLeft; // 좌측 페이지 내에서의 X 위치 (0 ~ bookWidth)
+        const mirroredX = rect.left + (bookWidth - relativeX); // 거울 반전된 X 좌표
+        
+        // 변환된 좌표에서 요소 찾기
+        const elementsAtPoint = document.elementsFromPoint(mirroredX, clickY);
+        
+        // 링크 찾기
+        for (const elem of elementsAtPoint) {
+            if (elem.tagName === 'A') {
+                e.preventDefault();
+                e.stopPropagation();
+                // 새 탭에서 열기 (target="_blank" 존중)
+                if (elem.target === '_blank') {
+                    window.open(elem.href, '_blank');
+                } else {
+                    window.location.href = elem.href;
+                }
+                return;
+            }
+        }
+        // 링크가 아니면 아무것도 안 함 (책 닫기 방지)
+        return;
+    }
+    
+    if (isRightPage) {
+        // 우측 페이지는 이미 위에서 처리됨 (정상 DOM 이벤트)
+        return;
+    }
+    
+    // 책 영역 밖 클릭 시 닫기
+    closeBook();
 });
+
+// 페이지 로드 시 실행
+document.addEventListener('DOMContentLoaded', function() {
+    // 3초 후 토스트 메시지 표시
+    setTimeout(showToast, 3000);
+});
+
+// 토스트 메시지 표시 함수
+function showToast() {
+    const toast = document.createElement('div');
+    toast.className = 'toast-message';
+    toast.innerHTML = `
+        <span class="toast-icon">📚</span>
+        <span class="toast-text">우측 책장에서 책을 클릭해주세요!</span>
+        <span class="toast-close" onclick="closeToast(this)">&times;</span>
+    `;
+    document.body.appendChild(toast);
+    
+    // 애니메이션을 위해 약간의 딜레이 후 show 클래스 추가
+    setTimeout(() => {
+        toast.classList.add('show');
+    }, 100);
+    
+    // 5초 후 자동으로 사라짐
+    setTimeout(() => {
+        if (toast.parentNode) {
+            toast.classList.remove('show');
+            setTimeout(() => {
+                if (toast.parentNode) {
+                    toast.parentNode.removeChild(toast);
+                }
+            }, 400);
+        }
+    }, 5000);
+}
+
+// 토스트 닫기 함수
+function closeToast(closeBtn) {
+    const toast = closeBtn.parentElement;
+    toast.classList.remove('show');
+    setTimeout(() => {
+        if (toast.parentNode) {
+            toast.parentNode.removeChild(toast);
+        }
+    }, 400);
+}

@@ -88,10 +88,20 @@ body, html { width: 100%; height: 100%; background-color: #2d1b18; overflow: hid
 .content a:hover { text-decoration: underline; }
 .content strong { color: #3e2723; }
 .page-footer { margin-top: auto; text-align: center; color: #8b6b5d; font-size: 12px; padding-top: 10px; }
-.close-btn { position: absolute; top: 40px; right: 50px; color: #c5a059; font-size: 50px; cursor: pointer; }
+.close-btn { position: absolute; top: 40px; right: 50px; color: #c5a059; font-size: 50px; cursor: pointer; z-index: 10; }
 
 .project-image-frame { width: 100%; padding: 12px; background: linear-gradient(145deg, #c5a059, #8b6914); border-radius: 8px; box-shadow: inset 0 2px 4px rgba(255,255,255,0.3), inset 0 -2px 4px rgba(0,0,0,0.2), 0 4px 12px rgba(0,0,0,0.3); margin-bottom: 20px; }
 .project-image-frame img { width: 100%; height: 180px; object-fit: cover; border-radius: 4px; display: block; background: #f5f5f5; border: 2px solid #fff; box-shadow: inset 0 0 10px rgba(0,0,0,0.1); }
+
+/* 모달 배경 오버레이 - 클릭 영역 분리 */
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
 
 /* 토스트 메시지 */
 .toast-message { position: fixed; bottom: -100px; right: 30px; background: linear-gradient(135deg, #3e2723 0%, #5d4037 100%); color: #f4ece1; padding: 16px 24px; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 0 1px rgba(197, 160, 89, 0.3); display: flex; align-items: center; gap: 12px; z-index: 9999; transition: bottom 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); border: 1px solid #c5a059; }
